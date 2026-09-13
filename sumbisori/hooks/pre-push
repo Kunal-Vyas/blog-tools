@@ -1,0 +1,4 @@
+#!/bin/sh
+# .git/hooks/pre-push  (chmod +x)
+# Review the commits being pushed. Bypass with: git push --no-verify
+exec sumbisori-pre-push "$@"
