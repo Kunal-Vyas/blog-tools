@@ -1,0 +1,38 @@
+version: 2
+
+# Record-level checks: is each row syrup? (Batch-level checks live in grade.py.)
+models:
+  - name: silver_payments
+    columns:
+      - name: event_id
+        data_tests: [unique, not_null]
+      - name: event_type
+        data_tests:
+          - accepted_values:
+              arguments: {values: [capture, refund]}
+      - name: currency
+        data_tests:
+          - accepted_values:
+              arguments: {values: [cad, usd]}
+      - name: amount_minor
+        data_tests: [not_null, positive]
+      - name: order_id
+        data_tests:
+          # CDC can lag the webhook by hours, so a payment may briefly precede its order.
+          - relationships:
+              arguments: {to: ref('silver_orders'), field: order_id}
+              config: {severity: warn}
+
+  - name: silver_orders
+    columns:
+      - name: order_id
+        data_tests: [unique, not_null]
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments: {values: [placed, paid, shipped, cancelled, returned]}
+
+  - name: silver_fx_rates
+    data_tests:
+      - unique_combination:
+          arguments: {columns: [rate_date, base, quote]}

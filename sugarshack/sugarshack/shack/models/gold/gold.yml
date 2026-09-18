@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: fct_payments
+    columns:
+      - name: event_id
+        data_tests: [unique, not_null]
+      - name: fx_rate
+        data_tests: [not_null]
+  - name: mart_daily_cash
+    data_tests:
+      - unique_combination:
+          arguments: {columns: [processor_date, currency]}
+  - name: mart_order_revenue
+    data_tests:
+      - unique_combination:
+          arguments: {columns: [order_date, ship_region]}

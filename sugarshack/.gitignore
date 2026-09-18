@@ -1,0 +1,11 @@
+# Everything the tool generates lives under data/ by default
+data/
+.venv/
+__pycache__/
+*.egg-info/
+build/
+.pytest_cache/
+# dbt writes these if you run it by hand from shack/
+sugarshack/shack/target/
+sugarshack/shack/logs/
+sugarshack/shack/dbt_packages/

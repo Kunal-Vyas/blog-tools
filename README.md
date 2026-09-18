@@ -16,6 +16,7 @@ follow its README.
 | Tool | What it does | Post |
 |---|---|---|
 | [`sumbisori`](sumbisori/) | A code reviewer that runs on a local open-weight model every time you `git push`. Scans for secrets, reviews the diff, blocks the push when it finds something that would hurt production. | [The Haenyeo Guide to AI](https://kunalvyas.info/blog/haenyeo-guide-to-ai.html) |
+| [`sugarshack`](sugarshack/) | A laptop-sized medallion lakehouse on DuckDB and dbt. Generates messy sources, builds bronze, silver and gold, audits gold against the payment processor's settlement report, and only publishes what passes. | [The Maple Syrup Guide to Data Lakes](https://kunalvyas.info/blog/maple-syrup-guide-to-data-lakes.html) |
 
 ---
 
@@ -23,7 +24,7 @@ follow its README.
 
 ```bash
 git clone https://github.com/Kunal-Vyas/blog-tools.git
-cd blog-tools/sumbisori
+cd blog-tools/sumbisori      # or blog-tools/sugarshack
 ```
 
 Then read that folder's README. Each tool lists its own prerequisites and sets up its own

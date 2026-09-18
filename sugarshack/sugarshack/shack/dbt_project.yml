@@ -1,0 +1,28 @@
+name: shack
+version: "0.1.0"
+config-version: 2
+profile: shack
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+
+flags:
+  send_anonymous_usage_stats: false
+
+vars:
+  lake: "{{ env_var('SUGAR_LAKE') }}"
+  payment_parsers: "{{ env_var('SUGAR_PARSERS', '2025-11-01,2026-08-01') }}"
+  business_tz: America/Halifax
+  as_of: "{{ env_var('SUGAR_AS_OF') }}"
+
+models:
+  shack:
+    bronze:
+      +schema: bronze
+      +materialized: view
+    silver:
+      +schema: silver
+    gold:
+      +schema: gold_build     # grade.py audits this, then publishes it to `gold`
+      +materialized: table

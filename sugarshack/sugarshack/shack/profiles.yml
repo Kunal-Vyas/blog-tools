@@ -1,0 +1,7 @@
+shack:
+  target: local
+  outputs:
+    local:
+      type: duckdb
+      path: "{{ env_var('SUGAR_WAREHOUSE') }}"
+      threads: 4
