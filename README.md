@@ -17,6 +17,8 @@ follow its README.
 |---|---|---|
 | [`sumbisori`](sumbisori/) | A code reviewer that runs on a local open-weight model every time you `git push`. Scans for secrets, reviews the diff, blocks the push when it finds something that would hurt production. | [The Haenyeo Guide to AI](https://kunalvyas.info/blog/haenyeo-guide-to-ai.html) |
 | [`sugarshack`](sugarshack/) | A laptop-sized medallion lakehouse on DuckDB and dbt. Generates messy sources, builds bronze, silver and gold, audits gold against the payment processor's settlement report, and only publishes what passes. | [The Maple Syrup Guide to Data Lakes](https://kunalvyas.info/blog/maple-syrup-guide-to-data-lakes.html) |
+| [`scriptorium`](scriptorium/) | A small search engine over Project Gutenberg, built with Apache Spark the way the Oxford English Dictionary was built: readers write slips, slips are sorted into pigeonholes, editors turn each pile into an entry, and nothing is published until it has been checked. | [The Dictionary Guide to Spark](https://www.kunalvyas.info/blog/dictionary-guide-to-spark.html) |
+| [`tratteggio`](tratteggio/) | A small, honest RAG assistant for a fresco conservation archive. Companion code for "The Restorer's Guide to RAG: Find, Match, Fill". | [The Restorer's Guide to RAG](https://kunalvyas.info/blog/restorer-guide-to-rag.html) |
 
 ---
 
