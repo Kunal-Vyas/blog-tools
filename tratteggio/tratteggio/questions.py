@@ -1,0 +1,48 @@
+"""The review board's test set: questions a restorer at the easel would ask.
+Evidence = a phrase the right card must contain."""
+
+ANSWERABLE = [
+    ("What was the merchant holding in his right hand?", "with a balance held up in his right hand"),
+    ("How big is the hole in the lower centre?", "measures 38 by 41 cm"),
+    ("Which way does the merchant face?", "facing left"),
+    ("Did the merchant's head always face that way?", "his head first turned right"),
+    ("What blue should I use for the sky?", "azurite in the sky"),
+    ("Where was ultramarine used?", "Ultramarine was found only in the Virgin's mantle"),
+    ("What red is the merchant's robe?", "vermilion glazed with a red lake"),
+    ("How were the haloes gilded?", "laid on a mordant"),
+    ("Is there a dog in the scene?", "A small dog lies at his feet"),
+    ("How many piles of coins were on the table?", "coins stacked in three piles"),
+    ("What was on the table in front of the merchant?", "an open ledger on the table before him"),
+    ("What was the merchant wearing on his head?", "hooded cap with a long tail"),
+    ("Is the old photo in colour?", "black and white"),
+    ("Why is the lower register so dark and dirty?", "The wax applied in 1953 has darkened"),
+    ("What wax did they use in the 1950s?", "Beeswax and dammar resin"),
+    ("How should I take off the old wax?", "removed with solvent gels"),
+    ("Paint is flaking at the right edge. What do I do first?", "must be consolidated before any cleaning"),
+    ("What is the white crust near the floor?", "Efflorescence of sulphate salts"),
+    ("How many giornate are there?", "23 giornate"),
+    ("Was the merchant painted in one day?", "painted in a single giornata"),
+    ("Who painted the fresco?", "the painter Jacopo di Neri"),
+    ("How much was the painter paid in total?", "90 florins"),
+    ("Where did the guild buy its ultramarine?", "Gesuati friars"),
+    ("What do the angels hold?", "The left angel holds a trumpet"),
+    ("Who kneels on the left?", "guild consuls kneeling"),
+    ("What does the underdrawing show?", "sinopia under the merchant"),
+    ("How do I retouch a loss we have a drawing for?", "reconstruct it in tratteggio"),
+    ("What if nothing documents the missing part?", "fill it with a neutral tone"),
+    ("Can I retouch with oil paint?", "never oil"),
+    ("How humid does the chapel get?", "ranged from 55 to 72 percent"),
+    ("Where should the candle stand go?", "at least 3 metres away"),
+    ("Was the damage already there in the 18th century?", "much spoiled by damp in the lower part"),
+]
+
+UNANSWERABLE = [
+    "What colour were the merchant's eyes?",
+    "Is the fresco signed?",
+    "What is painted on the vault?",
+    "Who restored the fresco before 1952?",
+    "What was the merchant's name?",
+    "How much did the 1953 treatment cost?",
+    "Is there a copy of the fresco in another museum?",
+    "What did the dog's head look like?",
+]
